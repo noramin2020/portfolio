@@ -1,0 +1,226 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Sticky Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #831843;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: white;
+  margin: 0 100px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0 100px;
+}
+
+.navbar a, .contact-btn {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header {
+  background: #831843;
+  color: white;
+  padding: 8rem 1rem 2rem; /* Add top padding to avoid overlapping navbar */
+  text-align: center;
+  height: 1000px;
+}
+
+.intro-section h1 {
+  font-size: 4rem;
+  margin-top: -30px;
+}
+
+.intro-section h3 {
+  margin-top: 300px;
+}
+
+.socials i {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.cv-btn {
+  background: white;
+  color: #831843;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.about {
+  padding: 4rem 2rem;
+  background: #fff;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: stretch;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.profile-img {
+  height: 100%;         /* Match text height */
+  width: auto;          /* Maintain aspect ratio */
+  object-fit: contain;
+  display: block;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 350px;
+}
+
+.about-text h2 {
+  font-size: 3.2rem; /* Larger heading */
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.about-text .greeting {
+  color: #000;
+  font-weight: 700;
+}
+
+.about-text .name {
+  color: #fbbf24;
+  font-weight: 800;
+}
+
+.about-text p {
+  font-size: 1.2rem; /* Larger paragraph text */
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+
+
+.profile-img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.about-text .highlight {
+  color: #831843;
+  font-weight: bold;
+}
+
+.projects {
+  background: #831843;
+  color: white;
+  padding: 2rem;
+  height: 1000px;
+}
+
+.projects h2 {
+  margin-left: 100px;
+}
+
+.project-card, .project-card2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: #831843;
+  margin: 1rem 100px;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.project-card img, .project-card2 img {
+  height: 250px;
+  border-radius: 8px;
+}
+
+.project-text {
+  max-width: 60%; /* controls text width */
+}
+.project-text h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.project-text h4 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #555; /* optional: slightly lighter color */
+}
+.experience, .skills {
+  padding: 2rem;
+  background: #fff;
+  margin: 0 100px;
+  height: 500px;
+}
+
+.exp-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.exp-card {
+  background: #831843;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  background: #831843;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.contact {
+  background: #831843;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  height: 500px;
+}
