@@ -9,6 +9,16 @@ import Bppp from './assets/logo.png';
 import Cppp from './assets/Cursor.png';
 import MSU from './assets/MSU.png';
 import Image from './assets/profile.png';
+import Canva from './assets/canva.png';
+import Css from './assets/css.png';
+import Figma from './assets/figma.png';
+import Html from './assets/html.png';
+import Js from './assets/js.png';
+import Mk from './assets/mk.png';
+import MySql from './assets/mySql.png';
+import Re from './assets/react.png';
+import Php from './assets/php.png';
+import Vite from './assets/Vitejs-logo.svg.png';
 import { FaLinkedin, FaInstagram, FaGithub, FaFacebook } from 'react-icons/fa';
 import React, { useState, useEffect } from "react";
 
@@ -224,43 +234,43 @@ ensure efficient user management.</h4>
         <h2>Skills</h2>
         <div className="skills-grid">
   <div className="skill">
-    <img src="/logos/Vitejs-logo.svg.png" alt="Vite" />
+    <img src={Vite} alt="Vite" />
     <span>Vite</span>
   </div>
   <div className="skill">
-    <img src="/logos/react.png" alt="React" />
+    <img src={Re} alt="React" />
     <span>React</span>
   </div>
   <div className="skill">
-    <img src="/logos/php.png" alt="PHP" />
+    <img src={Php} alt="PHP" />
     <span>PHP</span>
   </div>
   <div className="skill">
-    <img src="/logos/mySql.png" alt="MySQL" />
+    <img src={MySql} alt="MySQL" />
     <span>MySQL</span>
   </div>
   <div className="skill">
-    <img src="/logos/html.png" alt="HTML" />
+    <img src={Html} alt="HTML" />
     <span>HTML</span>
   </div>
   <div className="skill">
-    <img src="/logos/css.png" alt="CSS" />
+    <img src={Css} alt="CSS" />
     <span>CSS</span>
   </div>
   <div className="skill">
-    <img src="/logos/js.png" alt="JavaScript" />
+    <img src={Js} alt="JavaScript" />
     <span>JavaScript</span>
   </div>
   <div className="skill">
-    <img src="/logos/mk.png" alt="MikroTik" />
+    <img src={Mk} alt="MikroTik" />
     <span>MikroTik</span>
   </div>
   <div className="skill">
-    <img src="/logos/canva.png" alt="Canva" />
+    <img src={Canva} alt="Canva" />
     <span>Canva</span>
   </div>
   <div className="skill">
-    <img src="/logos/figma.png" alt="figma" />
+    <img src={Figma} alt="figma" />
     <span>Figma</span>
   </div>
 </div>
