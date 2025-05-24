@@ -19,7 +19,7 @@ import MySql from './assets/mySql.png';
 import Re from './assets/react.png';
 import Php from './assets/php.png';
 import Vite from './assets/Vitejs-logo.svg.png';
-import { FaLinkedin, FaInstagram, FaGithub, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaGithub, FaFacebook, FaEnvelope } from 'react-icons/fa';
 import React, { useState, useEffect } from "react";
 
 
@@ -125,6 +125,7 @@ const titles = [' Software Developer', 'n UI/UX Designer'];
     </header>
 
       <section className="about" id="about">
+        
         <div className="about-content">
           <div>
             <img src={profileImg} alt="Profile" className="profile-img" />
@@ -141,8 +142,47 @@ const titles = [' Software Developer', 'n UI/UX Designer'];
             <p>
             My professional focus is in Software Development, with experience as a WordPress Developer and UI/UX Developer. In addition to development, I also have hands-on experience in IT support, including network support, troubleshooting, and MikroTik configuration. I bring a well-rounded skill set that merges technical expertise with creative problem-solving and design thinking.
             </p>
+            {/* Floating icons container */}
+      <div className="floating-icons-container">
+  <div className="icon-wrapper">
+    <a
+      href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaLinkedin className="floating-icon" style={{ color: '#831843' }}/>
+    </a>
+  </div>
+  <div className="icon-wrapper">
+    <a href="https://github.com/noramin2020" target="_blank" rel="noopener noreferrer">
+      <FaGithub className="floating-icon" style={{ color: '#831843' }}/>
+    </a>
+  </div>
+  <div className="icon-wrapper">
+    <a href="mailto:hadjiali.nor.amin.job@gmail.com">
+      <FaEnvelope className="floating-icon" style={{ color: '#831843' }}/>
+    </a>
+  </div>
+  <div className="icon-wrapper">
+    <a
+      href="https://www.instagram.com/jd_ali_29/profilecard/?igsh=MTNjN3c3a3J3bThlaQ=="
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaInstagram className="floating-icon"style={{ color: '#831843' }} />
+    </a>
+  </div>
+  <div className="icon-wrapper">
+    <a href="https://www.facebook.com/Light002911" target="_blank" rel="noopener noreferrer">
+      <FaFacebook className="floating-icon" style={{ color: '#831843' }}/>
+    </a>
+  </div>
+</div>
+
           </div>
+          
         </div>
+        
       </section>
 
       <section className="projects" id="portfolio">
@@ -283,7 +323,6 @@ ensure efficient user management.</h4>
 
   <p>Email: <a href="mailto:hadjiali.nor.amin.job@gmail.com">hadjiali.nor.amin.job@gmail.com</a></p>
   <p>Cagayan de Oro, Misamis Oriental, Philippines</p>
-         <p>+63 905 691 9279</p>
 
   <hr className="footer-divider" />
 
