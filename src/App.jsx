@@ -10,7 +10,8 @@ import Cppp from './assets/Cursor.png';
 import MSU from './assets/MSU.png';
 import Image from './assets/profile.png';
 import { FaLinkedin, FaInstagram, FaGithub, FaFacebook } from 'react-icons/fa';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 
 function App() {
 
@@ -28,35 +29,65 @@ function App() {
 
     
   };
+const titles = ['Software Developer', 'UI/UX Designer'];
 
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [typing, setTyping] = useState(true);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    let timeout;
+
+    if (typing) {
+      // Typing effect: add one char
+      if (charIndex < titles[currentTitleIndex].length) {
+        timeout = setTimeout(() => {
+          setDisplayedText((prev) => prev + titles[currentTitleIndex][charIndex]);
+          setCharIndex(charIndex + 1);
+        }, 150);
+      } else {
+        // Finished typing, wait before deleting
+        timeout = setTimeout(() => setTyping(false), 1500);
+      }
+    } else {
+      // Deleting effect: remove one char
+      if (charIndex > 0) {
+        timeout = setTimeout(() => {
+          setDisplayedText((prev) => prev.slice(0, -1));
+          setCharIndex(charIndex - 1);
+        }, 100);
+      } else {
+        // Finished deleting, move to next title
+        setTyping(true);
+        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, typing, titles, currentTitleIndex]);
   
 
   return (
     <div className="app">
       <header className="header">
-        <div className="navbar">
-          <div className="logo">Nor-Amin Portfolio</div>
-
-          {/* Hamburger icon */}
-          <div className="burger" onClick={toggleMenu}>
-            &#9776;
-          </div>
-
-          <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
-            <ul>
-              <li><a href="#" onClick={() => setMenuOpen(false)}>Home</a></li>
-              <li><a href="#about" onClick={() => setMenuOpen(false)}>About Me</a></li>
-              <li><a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
-              <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
-              <li><a href="#skill" onClick={() => setMenuOpen(false)}>Skills</a></li>
-              <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact Me</a></li>
-            </ul>
-          </nav>
-        </div>
+       <div className="navbar">
+  <div className="logo">Nor-Amin Portfolio</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skill">Skills</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+</div>
 
         <div className="intro-section">
           <h3>Hello & Welcome</h3>
-          <h1>I am A Software Developer | UI/UX Designer</h1>
+          <h1>I am a {displayedText}<span className="cursor">|</span></h1>
            <div className="socials">
         <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
@@ -234,7 +265,6 @@ ensure efficient user management.</h4>
 
   <p>Email: <a href="mailto:hadjiali.nor.amin.job@gmail.com">hadjiali.nor.amin.job@gmail.com</a></p>
   <p>Cagayan de Oro, Misamis Oriental, Philippines</p>
-         <p>+63 905 691 9279</p>
 
   <hr className="footer-divider" />
 
