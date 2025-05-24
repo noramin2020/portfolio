@@ -73,7 +73,16 @@ const titles = [' Software Developer', 'n UI/UX Designer'];
       <header className="header">
        <div className="navbar">
   <div className="logo">Nor-Amin Portfolio</div>
-  <nav>
+  
+  {/* Burger Icon */}
+  <div className="burger" onClick={toggleMenu}>
+    <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+    <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+    <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+  </div>
+
+  {/* Navigation Menu */}
+  <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#about">About Me</a></li>
@@ -84,7 +93,6 @@ const titles = [' Software Developer', 'n UI/UX Designer'];
     </ul>
   </nav>
 </div>
-
         <div className="intro-section">
           <h3>Hello & Welcome</h3>
           <h1>I am a{displayedText}<span className="cursor">|</span></h1>
