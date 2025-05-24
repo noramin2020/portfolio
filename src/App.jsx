@@ -29,7 +29,7 @@ function App() {
 
     
   };
-const titles = ['Software Developer', 'UI/UX Designer'];
+const titles = [' Software Developer', 'n UI/UX Designer'];
 
   const [displayedText, setDisplayedText] = useState('');
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -87,7 +87,7 @@ const titles = ['Software Developer', 'UI/UX Designer'];
 
         <div className="intro-section">
           <h3>Hello & Welcome</h3>
-          <h1>I am a {displayedText}<span className="cursor">|</span></h1>
+          <h1>I am a{displayedText}<span className="cursor">|</span></h1>
            <div className="socials">
         <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
