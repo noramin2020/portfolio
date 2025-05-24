@@ -283,6 +283,7 @@ ensure efficient user management.</h4>
 
   <p>Email: <a href="mailto:hadjiali.nor.amin.job@gmail.com">hadjiali.nor.amin.job@gmail.com</a></p>
   <p>Cagayan de Oro, Misamis Oriental, Philippines</p>
+         <p>+63 905 691 9279</p>
 
   <hr className="footer-divider" />
 
