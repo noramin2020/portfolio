@@ -113,7 +113,7 @@ body, html {
 .about {
   padding: 4rem 2rem;
   position: relative;
-  background-image: url('/A.png');
+  background-image: url('/aboutback.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -194,8 +194,12 @@ body, html {
   padding: 1rem;
   border-radius: 8px;
   position: relative;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
+.project-card:hover, .project-card2:hover {
+  transform: scale(1.01);
+}
 .project-card .logo {
   position: absolute;
   top: 50%;
@@ -220,8 +224,11 @@ body, html {
   padding: 1rem;
   border-radius: 8px;
   position: relative;
+  box-shadow: 0 4px 8px #dac7c733;
 }
-
+.project-card-LPP:hover {
+  transform: scale(1.01);
+}
 .project-card-LPP .logo {
   position: absolute;
   top: 50%;
@@ -294,6 +301,10 @@ body, html {
   width: 400px;
   align-items: center;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.exp-card:hover {
+   transform: scale(1.05);
 }
 
 .exp-image {
@@ -322,7 +333,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
@@ -344,7 +355,7 @@ body, html {
   color: white;
   padding: 2rem;
   text-align: center;
-  height: 350px;
+  height: 300px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -380,6 +391,69 @@ body, html {
 .footerS a:hover {
   color: #ccc;
 }
+.floating-icons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So icons don’t block clicks on about text */
+  overflow: visible;
+  z-index: 1; /* behind the text if needed, or higher if you want */
+}
+
+.icon-wrapper {
+  position: absolute;
+  font-size: 2.5rem;
+  color: #831843;
+  animation: floatMove 6s ease-in-out infinite alternate;
+  pointer-events: auto; /* to allow clicks on icons */
+  cursor: pointer;
+}
+
+/* Position icons scattered randomly around the about section */
+.icon-wrapper:nth-child(1) {
+  top: 5%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.icon-wrapper:nth-child(2) {
+  top: 20%;
+  left: 80%;
+  animation-delay: 1.2s;
+}
+
+.icon-wrapper:nth-child(3) {
+  top: 75%;
+  left: 15%;
+  animation-delay: 2.5s;
+}
+
+.icon-wrapper:nth-child(4) {
+  top: 85%;
+  left: 65%;
+  animation-delay: 3.7s;
+}
+
+.icon-wrapper:nth-child(5) {
+  top: 40%;
+  left: 45%;
+  animation-delay: 5s;
+}
+
+@keyframes floatMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(12px, -12px) rotate(8deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
 
 @media (max-width: 768px) {
   .navbar {
@@ -474,11 +548,13 @@ body, html {
     padding: 0.8rem 1.5rem;
   }
 
-  .about {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    height: auto;
-  }
+ .about {
+  position: relative;
+  padding: 2rem;
+  overflow: visible; /* allow icons outside bounds if needed */
+  min-height: 400px; /* or adjust */
+}
+
 
   .about-content {
     flex-direction: column;
