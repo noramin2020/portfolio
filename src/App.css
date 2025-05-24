@@ -64,7 +64,7 @@ body, html {
 /* Header Section */
 .header {
   position: relative;
-  background-image: url('/H.png');
+  background-image: url('/Home.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,7 +113,7 @@ body, html {
 .about {
   padding: 4rem 2rem;
   position: relative;
-  background-image: url('/aboutback.png');
+  background-image: url('/A.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
