@@ -244,7 +244,7 @@ ensure efficient user management.</h4>
         <div className="exp-card">
             <img src={lppp} alt="The Launchpadteam Inc." className="exp-image" />
             <div className="exp-text">
-                <h4>The Launchpadteam Inc.</h4>
+                <h4>The Launchpadteam Inc.<br />September-December 2024</h4>
                 <p>Roles: IT Intern</p>
                 <p>Software Developer<br />Wordpress Developer<br />UI/UX Developer<br />IT-Support</p>
             </div>
@@ -252,17 +252,17 @@ ensure efficient user management.</h4>
         <div className="exp-card">
             <img src={Cppp} alt="The Cursor Publication" className="exp-image" />
             <div className="exp-text">
-                <h4>The Cursor Publication</h4>
-                <p>Roles: Member</p>
-                <p>Former Cartoon Editor<br />Cartoonist</p>
+                <h4>The Cursor Publication<br />2023-2025</h4>
+                <p>Roles: Former Member</p>
+                <p>Cartoon Editor<br />Cartoonist</p>
             </div>
         </div>
         <div className="exp-card">
             <img src={MSU} alt="Mindanao State University Main Campus" className="exp-image" />
             <div className="exp-text">
-                <h4>Mindanao State University Main Campus</h4>
-                <p>Roles: Student</p>
-                <p>Bachelor of Science in Information Technology<br />2020-2025</p>
+                <h4>Mindanao State University Main Campus<br />2020-2025</h4>
+                
+                <p>Bachelor of Science in Information Technology<br />Network Systems</p>
                 
             </div>
         </div>
@@ -270,52 +270,36 @@ ensure efficient user management.</h4>
 </section>
 
 
-      <section className="skills" id="skill">
-        <h2>Skills</h2>
-        <div className="skills-grid">
-  <div className="skill">
-    <img src={Vite} alt="Vite" />
-    <span>Vite</span>
+<section className="skills" id="skill">
+  <h2>Skills</h2>
+  <div className="skills-grid">
+    {[
+      { name: "Vite", img: Vite, percent: 75 },
+      { name: "React", img: Re, percent: 75 },
+      { name: "PHP", img: Php, percent: 80 },
+      { name: "MySQL", img: MySql, percent: 85 },
+      { name: "HTML", img: Html, percent: 75 },
+      { name: "CSS", img: Css, percent: 60 },
+      { name: "JavaScript", img: Js, percent: 65 },
+      { name: "MikroTik", img: Mk, percent: 75 },
+      { name: "Canva", img: Canva, percent: 80 },
+      { name: "Figma", img: Figma, percent: 80 }
+    ].map((skill, index) => (
+      <div className="skill" key={index}>
+        <img src={skill.img} alt={skill.name} />
+        <span>{skill.name}</span>
+        <div className="progress-bar">
+          <div
+            className="progress-fill"
+            style={{ width: `${skill.percent}%` }}
+          ></div>
+        </div>
+        <span className="percentage">{skill.percent}%</span>
+      </div>
+    ))}
   </div>
-  <div className="skill">
-    <img src={Re} alt="React" />
-    <span>React</span>
-  </div>
-  <div className="skill">
-    <img src={Php} alt="PHP" />
-    <span>PHP</span>
-  </div>
-  <div className="skill">
-    <img src={MySql} alt="MySQL" />
-    <span>MySQL</span>
-  </div>
-  <div className="skill">
-    <img src={Html} alt="HTML" />
-    <span>HTML</span>
-  </div>
-  <div className="skill">
-    <img src={Css} alt="CSS" />
-    <span>CSS</span>
-  </div>
-  <div className="skill">
-    <img src={Js} alt="JavaScript" />
-    <span>JavaScript</span>
-  </div>
-  <div className="skill">
-    <img src={Mk} alt="MikroTik" />
-    <span>MikroTik</span>
-  </div>
-  <div className="skill">
-    <img src={Canva} alt="Canva" />
-    <span>Canva</span>
-  </div>
-  <div className="skill">
-    <img src={Figma} alt="figma" />
-    <span>Figma</span>
-  </div>
-</div>
+</section>
 
-      </section>
 
       <footer className="contact" id="contact">
 
