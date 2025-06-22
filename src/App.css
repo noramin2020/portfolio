@@ -71,7 +71,7 @@ body, html {
   color: white;
   padding: 8rem 2rem 2rem; /* Add top padding to avoid overlapping navbar */
   text-align: center;
-  height: 1000px;
+  height: 910px;
 }
 
 .intro-section h1 {
@@ -113,11 +113,11 @@ body, html {
 .about {
   padding: 4rem 2rem;
   position: relative;
-  background-image: url('/A.png');
+  background-image: url('/aboutback.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 1000px;
+  height: 940px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,7 +283,7 @@ body, html {
   padding: 2rem;
   background: #fff;
   margin: 0 100px;
-  height: 500px;
+  height: 470px;
 }
 
 .exp-cards {
@@ -323,7 +323,7 @@ body, html {
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   text-align: center;
-  padding: 100px;
+  padding: 10px;
 }
 
 .skill {
