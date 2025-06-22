@@ -278,7 +278,7 @@ ensure efficient user management.</h4>
       { name: "PHP", img: Php, percent: 65 },
       { name: "Vite", img: Vite, percent: 75 },
       { name: "React", img: Re, percent: 75 },
-      { name: "HTML, CSS, JS", img: HCJ, percent: 75 },
+      { name: "HTML, CSS, JS", img: HCJ, percent: 65 },
       { name: "MySQL", img: MySql, percent: 85 },
       { name: "Canva", img: Canva, percent: 80 },
       { name: "Figma", img: Figma, percent: 70 },
