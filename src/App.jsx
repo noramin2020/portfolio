@@ -1,5 +1,5 @@
 import './App.css';
-import profileImg from './assets/Self.jpg';
+import profileImg from './assets/Self.png';
 import Guess from './assets/Wfi.png';
 import LPP from './assets/LPP.png';
 import BRGY from './assets/Brgy.png';
