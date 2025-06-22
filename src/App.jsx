@@ -10,10 +10,10 @@ import Cppp from './assets/Cursor.png';
 import MSU from './assets/MSU.png';
 import Image from './assets/profile.png';
 import Canva from './assets/canva.png';
-import Css from './assets/css.png';
 import Figma from './assets/figma.png';
-import Html from './assets/html.png';
-import Js from './assets/js.png';
+import Power from './assets/Power.png';
+import HCJ from './assets/HCJ.png';
+import Ex from './assets/Ex.png';
 import Mk from './assets/mk.png';
 import MySql from './assets/mySql.png';
 import Re from './assets/react.png';
@@ -274,16 +274,16 @@ ensure efficient user management.</h4>
   <h2>Skills</h2>
   <div className="skills-grid">
     {[
+      { name: "Express", img: Ex, percent: 80 },
+      { name: "PHP", img: Php, percent: 80 },
       { name: "Vite", img: Vite, percent: 75 },
       { name: "React", img: Re, percent: 75 },
-      { name: "PHP", img: Php, percent: 80 },
+      { name: "HTML, CSS, JS", img: HCJ, percent: 75 },
       { name: "MySQL", img: MySql, percent: 85 },
-      { name: "HTML", img: Html, percent: 75 },
-      { name: "CSS", img: Css, percent: 60 },
-      { name: "JavaScript", img: Js, percent: 65 },
-      { name: "MikroTik", img: Mk, percent: 75 },
       { name: "Canva", img: Canva, percent: 80 },
-      { name: "Figma", img: Figma, percent: 80 }
+      { name: "Figma", img: Figma, percent: 80 },
+      { name: "Power", img: Power, percent: 60 },
+      { name: "MikroTik", img: Mk, percent: 75 },
     ].map((skill, index) => (
       <div className="skill" key={index}>
         <img src={skill.img} alt={skill.name} />
