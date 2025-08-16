@@ -32,7 +32,7 @@ function App() {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/Resume_Hadji Ali_10124.pdf'; // This should match the filename in your public folder
-    link.download = 'NorAmin_CV.pdf'; // Optional: customize download name
+    link.download = 'HadjialiResume.pdf'; // Optional: customize download name
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
