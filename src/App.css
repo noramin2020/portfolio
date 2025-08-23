@@ -626,9 +626,7 @@ body, html {
   }
 
   .project-card .logo, .project-card-LPP .logo {
-    position: static;
-    transform: none;
-    margin-bottom: 1rem;
+    display: none;
   }
 
   .experience, .skills {
