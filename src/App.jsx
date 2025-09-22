@@ -33,8 +33,8 @@ function App() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/UpResume.pdf';
-    link.download = 'NorAmin_CV.pdf';
+    link.href = '/Resume_Hadji Ali_101240.pdf';
+    link.download = 'NorAminHadjiAli.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
