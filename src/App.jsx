@@ -5,7 +5,7 @@ import LPP from './assets/LPP.png';
 import BRGY from './assets/Brgy.png';
 import lppp from './assets/lppp.png';
 import Gppp from './assets/guess_logo.png';
-import Bppp from './assets/logo.png';
+import Bppp from './assets/logo.svg';
 import Cppp from './assets/Cursor.png';
 import MSU from './assets/MSU.png';
 import Image from './assets/Icon.svg';
@@ -19,10 +19,16 @@ import MySql from './assets/mySql.png';
 import Re from './assets/react.png';
 import Php from './assets/php.png';
 import mongo from './assets/mongo.jpg';
+import arrowLeft from '../public/Arrowl.svg';
+import arrowRigth from '../public/Arrowr.svg';
+import Open from '../public/Open.svg';
+import Close from '../public/Close.svg';
+
 
 import Vite from './assets/Vitejs-logo.svg.png';
 import { FaLinkedin, FaInstagram, FaGithub, FaFacebook, FaFileDownload  } from 'react-icons/fa';
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,15 +39,15 @@ function App() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Resume_Hadji Ali_101240.pdf';
-    link.download = 'NorAminHadjiAli.pdf';
+    link.href = '/UpResume.pdf';
+    link.download = 'NorAmin_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
 
-  const titles = [' Software Developer', ' UI/UX Designer'];
+  const titles = [' Software Developer', 'n UI/UX Designer', ` Graphics Designer`];
   const [displayedText, setDisplayedText] = useState('');
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [typing, setTyping] = useState(true);
@@ -85,6 +91,36 @@ function App() {
     { name: "Power", img: Power, percent: 60 },
     { name: "MikroTik", img: Mk, percent: 75 },
   ];
+ // ✅ Graphics Carousel
+  const graphicsImages = [
+    '/graphics/1.png',
+    '/graphics/2.png',
+    '/graphics/3.png',
+    '/graphics/4.png',
+    '/graphics/5.png',
+    '/graphics/6.png',
+    '/graphics/7.png',
+    '/graphics/8.png',
+    '/graphics/9.png',
+    '/graphics/10.png',
+    '/graphics/11.png',
+    '/graphics/12.png',
+    '/graphics/13.png',
+    '/graphics/14.png',
+    '/graphics/15.png',
+    '/graphics/16.png',
+  ];
+
+  const [graphicIndex, setGraphicIndex] = useState(0);
+
+  const nextGraphic = () => {
+    setGraphicIndex((prev) => (prev + 1) % graphicsImages.length);
+  };
+
+  const prevGraphic = () => {
+    setGraphicIndex((prev) => (prev - 1 + graphicsImages.length) % graphicsImages.length);
+  };
+  
 
   return (
     <div className="app">
@@ -96,11 +132,20 @@ function App() {
             </div>
 
           {/* Burger Icon */}
-          <div className="burger" onClick={toggleMenu}>
+
+          {/* Custom Menu Icon */}
+<div className="burger" onClick={toggleMenu}>
+  {menuOpen ? (
+    <img src={Close} alt="Close Menu" className="burger-icon" />
+  ) : (
+    <img src={Open} alt="Open Menu" className="burger-icon" />
+  )}
+</div>
+          {/* <div className="burger" onClick={toggleMenu}>
             <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
             <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
             <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
-          </div>
+          </div>   */}
 
           {/* Navigation Menu */}
           <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
@@ -108,9 +153,11 @@ function App() {
     <li><a href="#" onClick={closeMenu}>Home</a></li>
     <li><a href="#about" onClick={closeMenu}>About Me</a></li>
     <li><a href="#portfolio" onClick={closeMenu}>Portfolio</a></li>
+    <li><a href="#graphics" onClick={closeMenu}>Graphics</a></li>
     <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
     <li><a href="#skill" onClick={closeMenu}>Skills</a></li>
     <li><a href="#contact" onClick={closeMenu}>Contact Me</a></li>
+    
   </ul>
 </nav>
 
@@ -203,6 +250,59 @@ function App() {
           <img className="logo" src={Gppp} alt="Guess Logo" />
           <img src={Guess} alt="WiFi System" />
         </div>
+      </section>
+
+           {/* GRAPHICS SECTION */}
+      <section className="graphics-section" id="graphics">
+        
+<h2 className="graphics-title">Graphics Design Gallery</h2>
+
+        <div className="graphics-container">
+          <button className="nav-btn left" onClick={prevGraphic}>
+                    <img
+                      src={arrowLeft}
+                      alt="Previous"
+                      className="arrow-icon"
+                    />
+                  </button>
+
+
+          <div className="graphics-view">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={graphicIndex}
+                src={graphicsImages[graphicIndex]}
+                alt={`Graphic ${graphicIndex + 1}`}
+                className="graphics-image"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.6 }}
+              />
+            </AnimatePresence>
+          </div>
+
+          <button className="nav-btn right" onClick={nextGraphic}>
+                    <img
+                      src={arrowRigth}
+                      alt="Next"
+                      className="arrow-icon"
+                    />
+                  </button>
+        </div>
+        
+
+        <div className="graphics-dots">
+          {graphicsImages.map((_, i) => (
+            <span
+              key={i}
+              onClick={() => setGraphicIndex(i)}
+              className={`dot ${i === graphicIndex ? 'active' : ''}`}
+            ></span>
+          ))}
+        </div>
+        
+        
       </section>
 
       {/* EXPERIENCE */}
