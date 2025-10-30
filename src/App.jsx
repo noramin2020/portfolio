@@ -28,7 +28,7 @@ import Close from '../public/Close.svg';
 import Vite from './assets/Vitejs-logo.svg.png';
 import { FaLinkedin, FaInstagram, FaGithub, FaFacebook, FaFileDownload  } from 'react-icons/fa';
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from 'framer-motion';
+//import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
