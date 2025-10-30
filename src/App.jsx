@@ -252,7 +252,7 @@ function App() {
         </div>
       </section>
 
-           {/* GRAPHICS SECTION */}
+           {/* GRAPHICS SECTION 
       <section className="graphics-section" id="graphics">
         
 <h2 className="graphics-title">Graphics Design Gallery</h2>
@@ -303,7 +303,7 @@ function App() {
         </div>
         
         
-      </section>
+      </section> */} 
 
       {/* EXPERIENCE */}
       <section className="experience" id="experience">
