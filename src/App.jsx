@@ -5,7 +5,7 @@ import LPP from './assets/LPP.png';
 import BRGY from './assets/Brgy.png';
 import lppp from './assets/lppp.png';
 import Gppp from './assets/guess_logo.png';
-import Bppp from './assets/logo.svg';
+import Bppp from './assets/BRGY.svg';
 import Cppp from './assets/Cursor.png';
 import MSU from './assets/MSU.png';
 import Image from './assets/Icon.svg';
@@ -13,12 +13,12 @@ import Canva from './assets/canva.png';
 import Figma from './assets/figma.png';
 import Power from './assets/Power.png';
 import HCJ from './assets/HCJ.png';
-import Ex from './assets/Ex.png';
+import Ex from './assets/Express.png';
 import Mk from './assets/mk.png';
 import MySql from './assets/mySql.png';
 import Re from './assets/react.png';
 import Php from './assets/php.png';
-import mongo from './assets/mongo.jpg';
+import mongo from './assets/Mongo.jpg';
 import arrowLeft from '../public/Arrowl.svg';
 import arrowRigth from '../public/Arrowr.svg';
 import Open from '../public/Open.svg';
@@ -28,7 +28,7 @@ import Close from '../public/Close.svg';
 import Vite from './assets/Vitejs-logo.svg.png';
 import { FaLinkedin, FaInstagram, FaGithub, FaFacebook, FaFileDownload  } from 'react-icons/fa';
 import React, { useState, useEffect } from "react";
-//import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -252,58 +252,36 @@ function App() {
         </div>
       </section>
 
-           {/* GRAPHICS SECTION 
-      <section className="graphics-section" id="graphics">
-        
-<h2 className="graphics-title">Graphics Design Gallery</h2>
+{/* GRAPHICS SECTION */}
+<section className="graphics-section" id="graphics">
+  <h2 className="graphics-title">Graphics Design Gallery</h2>
 
-        <div className="graphics-container">
-          <button className="nav-btn left" onClick={prevGraphic}>
-                    <img
-                      src={arrowLeft}
-                      alt="Previous"
-                      className="arrow-icon"
-                    />
-                  </button>
+  {/* FIRST ROW → scrolls left, normal order */}
+  <div className="graphics-slider">
+    <div className="graphics-track">
+      {[...graphicsImages, ...graphicsImages].map((image, index) => (
+        <div className="graphic-card" key={index}>
+          <img src={image} alt={`Graphic ${index + 1}`} className="graphic-img" />
+        </div>
+      ))}
+    </div>
+  </div>
 
-
-          <div className="graphics-view">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={graphicIndex}
-                src={graphicsImages[graphicIndex]}
-                alt={`Graphic ${graphicIndex + 1}`}
-                className="graphics-image"
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.6 }}
-              />
-            </AnimatePresence>
+  {/* SECOND ROW → scrolls right, reversed order */}
+  <div className="graphics-slider2">
+    <div className="graphics-track2">
+      {[...graphicsImages.slice().reverse(), ...graphicsImages.slice().reverse()].map(
+        (image, index) => (
+          <div className="graphic-card2" key={index}>
+            <img src={image} alt={`Graphic ${index + 1}`} className="graphic-img2" />
           </div>
+        )
+      )}
+    </div>
+  </div>
+</section>
 
-          <button className="nav-btn right" onClick={nextGraphic}>
-                    <img
-                      src={arrowRigth}
-                      alt="Next"
-                      className="arrow-icon"
-                    />
-                  </button>
-        </div>
-        
 
-        <div className="graphics-dots">
-          {graphicsImages.map((_, i) => (
-            <span
-              key={i}
-              onClick={() => setGraphicIndex(i)}
-              className={`dot ${i === graphicIndex ? 'active' : ''}`}
-            ></span>
-          ))}
-        </div>
-        
-        
-      </section> */} 
 
       {/* EXPERIENCE */}
       <section className="experience" id="experience">
