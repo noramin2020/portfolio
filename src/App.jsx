@@ -178,7 +178,7 @@ function App() {
             <a href="https://github.com/noramin2020" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a href="https://www.facebook.com/Light002911" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61582377899610" target="_blank" rel="noopener noreferrer">
               <FaFacebook />
             </a>
           </div>
