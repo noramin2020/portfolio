@@ -8,7 +8,7 @@ import Gppp from './assets/guess_logo.png';
 import Bppp from './assets/BRGY.svg';
 import Cppp from './assets/Cursor.png';
 import MSU from './assets/MSU.png';
-import SPARK from './assets/SPARK.jpg';
+import SPARK from './assets/SPARK.png';
 import Image from './assets/Icon.svg';
 import Canva from './assets/canva.png';
 import Figma from './assets/figma.png';
