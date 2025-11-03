@@ -8,6 +8,7 @@ import Gppp from './assets/guess_logo.png';
 import Bppp from './assets/BRGY.svg';
 import Cppp from './assets/Cursor.png';
 import MSU from './assets/MSU.png';
+import SPARK from './assets/SPARK.jpg';
 import Image from './assets/Icon.svg';
 import Canva from './assets/canva.png';
 import Figma from './assets/figma.png';
@@ -287,6 +288,14 @@ function App() {
       <section className="experience" id="experience">
         <h2>Experience and Education</h2>
         <div className="exp-cards">
+          <div className="exp-card">
+            <img src={SPARK} alt="The Cursor Publication" className="exp-image" />
+            <div className="exp-text">
+              <h4>DICT-SPARK<br />2025</h4>
+              <p>Roles: GRAPHICS DESIGNER</p>
+              <p>Trainee</p>
+            </div>
+          </div>
           <div className="exp-card">
             <img src={lppp} alt="The Launchpadteam Inc." className="exp-image" />
             <div className="exp-text">
