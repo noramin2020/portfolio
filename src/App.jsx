@@ -292,15 +292,15 @@ function App() {
             <img src={SPARK} alt="DICT SPARK" className="exp-image" />
             <div className="exp-text">
               <h4>DICT-SPARK<br />October, 2025</h4>
-              <p>Roles: Graphics Designer Trainee</p>
-              <p>Outstanding Trainee</p>
+              <p>Graphics Designer Trainee</p>
+              <p></p>
             </div>
           </div>
           <div className="exp-card">
             <img src={lppp} alt="The Launchpadteam Inc." className="exp-image" />
             <div className="exp-text">
               <h4>The Launchpadteam Inc.<br />September-December 2024</h4>
-              <p>Roles: IT Intern</p>
+              <p>IT Intern</p>
               <p>Software Developer<br />Wordpress Developer<br />UI/UX Developer<br />IT-Support</p>
             </div>
           </div>
@@ -308,7 +308,7 @@ function App() {
             <img src={Cppp} alt="The Cursor Publication" className="exp-image" />
             <div className="exp-text">
               <h4>The Cursor Publication<br />2023-2025</h4>
-              <p>Roles: Former Member</p>
+              <p>Former Member</p>
               <p>Cartoon Editor<br />Cartoonist</p>
             </div>
           </div>
