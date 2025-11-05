@@ -289,11 +289,11 @@ function App() {
         <h2>Experience and Education</h2>
         <div className="exp-cards">
           <div className="exp-card">
-            <img src={SPARK} alt="The Cursor Publication" className="exp-image" />
+            <img src={SPARK} alt="DICT SPARK" className="exp-image" />
             <div className="exp-text">
-              <h4>DICT-SPARK<br />2025</h4>
-              <p>Roles: GRAPHICS DESIGNER</p>
-              <p>Trainee</p>
+              <h4>DICT-SPARK<br />October, 2025</h4>
+              <p>Roles: Graphics Designer Trainee</p>
+              <p>Outstanding Trainee</p>
             </div>
           </div>
           <div className="exp-card">
